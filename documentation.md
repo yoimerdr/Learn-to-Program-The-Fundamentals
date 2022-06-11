@@ -1,17 +1,21 @@
 # Documentación Básica Para Programar en Python
 
 ## Indice de contenidos
-* [Operaciones Básicas](#Operaciones-Básicas)
-* [Funciones](#Funciones)
-* [Bools](#Bools)
-* [Importar Módulos](#Importar-Módulos)
-* [Condicionales](#Condicionales)
-* [Ciclos](#Ciclos)
-* [Input y Output](#Input-y-Output)
-* [Comentarios](#Comentarios)
-* [Funciones help y dir](#Funciones-help-y-dir)
-* [Strings](#Strings)
-* [Lists](#Lists)
+* [Operaciones Básicas](#operaciones-básicas)
+* [Funciones](#funciones)
+* [Bools](#bools)
+* [Importar Módulos](#importar-módulos)
+* [Condicionales](#condicionales)
+* [Ciclos](#ciclos)
+* [Input y Output](#input-y-output)
+* [Comentarios](#comentarios)
+* [Funciones help y dir](#funciones-help-y-dir)
+* [Strings](#strings)
+* [Listas](#listas)
+* [Rangos](#rangos)
+* [Archivos](#archivos)
+* [Tuplas](#tuplas)
+* [Diccionarios](#diccionarios)
 ## Operaciones Básicas
 
 Para programar en python, como en cualquier otro lenguaje de programación
@@ -149,7 +153,7 @@ string[:] #Retorna el string completo.
 ```
 String es una cadena de texto inmutable, por lo que no se puede modificar los elementos(caracteres) dentro de el.
 
-## Lists
+## Listas
 
 Clase para una collección de datos. Es de tipo mutable.  
 Para definir una lista en python se utiliza la siguiente declaración `variable_name = [element1, element2... elementN]`.  
@@ -184,5 +188,56 @@ Con listas en python se pueden usar los siguientes operadores:
 | `max(list)` | Devuelve el elemento máximo de la lista                                                |
 | `sum(list)` | Devuelve la suma de todos los elementos de la lista, los elementos deben ser numéricos |
 
-Puesto que list es un objeto iterable, las misma
+Puesto que list es un objeto iterable, las misma reglas de indexación de los string funcionan para las listas.
 
+## Rangos
+range, se utiliza para crear una secuencia númerica iterable. Se suele usar en bucles for: `for i in range(n):`  
+Tiene la siguiente estructura:  
+```
+"""
+range(start, end, step) Empieza en start, inclusivo, finaliza en end, exclusivo, y avanza segun el valor de step.
+Así, la siguiente declaración:
+    for i in range(1,6,2):
+        for body
+Crea una secuencia que va desde 1 hasta 4 y avanza de 2 en 2.
+"""
+```
+
+## Archivos
+En python para abrir un archivo, generalmente de texto plano, se utiliza la siguente función `open(filename, mode)`.  
+```
+"""
+Donde:
+filename #nombre del archivo(ruta completa)
+'r' #abre el archivo en modo lectura
+'w' #abre el archivo en modo escritura
+'a' #abre el archivo en modo añadir, añade a lo que ya está en el archivo
+"""
+```
+
+## Tuplas
+Funciona como las listas, pero los valores de las tuplas son inmutables.
+Para la declarar un tupla se usa la siguiente estructura: `tuple_name = (item1, item2...)`
+
+## Diccionarios
+En python, un diccionario es una colección de datos clave-valor. Para declarar un diccionario se sigue la siguiente sintaxis: `dictionary_name = { key1 : value1, key2 : value2... keyN : valueN }`  
+Las keys dentro del diccionario deben ser únicas, los valores pueden ser duplicados.  
+
+Operadores con diccionarios
+
+| Operador           | Descripción                                   |
+|--------------------|-----------------------------------------------|
+| `in`               | Contiene                                      |
+| `del`              | Elimina                                       |
+| `len(dictionary)`  | Número de pares clave:valor en el diccionario |
+
+Ejemplo de uso de operadores de los diccionarios:
+```
+dic = { "a1" : 2, "a2" : 3, "a3":4 } #declaración del diccionario
+print("a1" in dic) #Imprime True, porque la llave "a1" existe en el diccionario
+print(3 in dic) #Imprime False, porque la llave 3 no existe en el diccionario
+print("pairs key:value in dic", len(dic), sep=', ') #Imprime "pairs key:value in dic, 3", porque hay 3 pares llave:valor en dic
+
+del dic["a1"] #elimina el par "a1":2 de dic
+print("pairs key:value in dic", len(dic), sep=', ') #Imprime "pairs key:value in dic, 2", porque ahora hay 2 pares llave:valor in dic, el par "a1":2 fue eliminado
+```
