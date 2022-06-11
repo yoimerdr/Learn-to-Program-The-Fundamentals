@@ -1,15 +1,15 @@
 # Documentación Básica Para Programar en Python
 
 ## Indice de contenidos
-* [Operaciones Básicas](#Operaciones Básicas)
+* [Operaciones Básicas](#Operaciones-Básicas)
 * [Funciones](#Funciones)
 * [Bools](#Bools)
-* [Importar Módulos](#Importar Módulos)
+* [Importar Módulos](#Importar-Módulos)
 * [Condicionales](#Condicionales)
 * [Ciclos](#Ciclos)
-* [Input y Output](#Input y Output)
+* [Input y Output](#Input-y-Output)
 * [Comentarios](#Comentarios)
-* [Funciones help y dir](#Funciones help y dir)
+* [Funciones help y dir](#Funciones-help-y-dir)
 * [Strings](#Strings)
 * [Lists](#Lists)
 ## Operaciones Básicas
