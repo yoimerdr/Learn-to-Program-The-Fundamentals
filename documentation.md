@@ -1,5 +1,17 @@
 # Documentación Básica Para Programar en Python
 
+## Indice de contenidos
+* [Operaciones Básicas](#Operaciones Básicas)
+* [Funciones](#Funciones)
+* [Bools](#Bools)
+* [Importar Módulos](#Importar Módulos)
+* [Condicionales](#Condicionales)
+* [Ciclos](#Ciclos)
+* [Input y Output](#Input y Output)
+* [Comentarios](#Comentarios)
+* [Funciones help y dir](#Funciones help y dir)
+* [Strings](#Strings)
+* [Lists](#Lists)
 ## Operaciones Básicas
 
 Para programar en python, como en cualquier otro lenguaje de programación
@@ -135,3 +147,42 @@ string[:m] #Retorna un substring desde el principio del string hasta la posició
 string[:] #Retorna el string completo.
 
 ```
+String es una cadena de texto inmutable, por lo que no se puede modificar los elementos(caracteres) dentro de el.
+
+## Lists
+
+Clase para una collección de datos. Es de tipo mutable.  
+Para definir una lista en python se utiliza la siguiente declaración `variable_name = [element1, element2... elementN]`.  
+Y como cualquier objeto, una lista en python también tiene métodos. A continuación se listan algunos.
+
+Métodos que modifican la lista:
+
+| Método                   | Descripción                                                                   |
+|--------------------------|-------------------------------------------------------------------------------|
+| `.append(object)`        | Añade `object` al final de la lista                                           |
+| `.extend(list)`          | Añade los elementos del parámetro `list` a la lista                           |
+| `.pop(index)`            | Elimina y devuelve el elemento en `index` (por defecto el último) de la lista |
+| `.remove(object)`        | Elimina la primera aparición de `object`; error si no existe                  |
+| `.reverse()`             | Invierte la lista                                                             | 
+| `.sort()`                | Ordena la lista de menor a mayor                                              |
+| `.insert(index, object)` | Inserta `object` en el `index` dado                                           |
+
+Métodos que no modifican la lista:
+
+| Método                | Descripción                                                                 |
+|-----------------------|-----------------------------------------------------------------------------|
+| `list.count(object)`  | Devuelve el número de veces que `object` aparece en la lista                |
+| `list.index(object)`  | Devuelve el índice de la primera aparición de `object`; error si no existe  |
+
+Con listas en python se pueden usar los siguientes operadores:
+
+| Operador    | Descripción                                                                            |
+|-------------|----------------------------------------------------------------------------------------|
+| `in`        | Si un valor está en la lista                                                           |
+| `len(list)` | Tamaño de la lista                                                                     |
+| `min(list)` | Devuelve el elemento mínimo de la lista                                                |
+| `max(list)` | Devuelve el elemento máximo de la lista                                                |
+| `sum(list)` | Devuelve la suma de todos los elementos de la lista, los elementos deben ser numéricos |
+
+Puesto que list es un objeto iterable, las misma
+
